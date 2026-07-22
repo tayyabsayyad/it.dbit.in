@@ -68,8 +68,9 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      animation: verticalScroll 12s linear infinite;
+      animation: verticalScroll 55s linear infinite;
       will-change: transform;
+      font-size: 0.85rem;
     }
 
     .scroll-text.paused {
@@ -196,13 +197,13 @@
     }
 
     .split-stack-card .split-part:first-child {
-      flex: 1.45;
+      flex: 2.3;
       justify-content: flex-start !important;
     }
 
-    /* .split-stack-card .split-part:last-child {
-      flex: 0.55;
-    } */
+    .split-stack-card .split-part:last-child {
+      flex: 0.7;
+    }
     .highlights-card::after {
       content: '';
       position: absolute;
@@ -437,25 +438,30 @@
       <div class="col-md-4 p-3" style="height: 400px;">
         <div id="sidebar-events-wrapper" style="gap: 1rem;">
           <div
-            class="modern-box-green w-100 mb-4 text-center d-flex flex-column align-items-center justify-content-center">
+            class="modern-box-green w-100 mb-4 text-center d-flex flex-column align-items-center justify-content-center"
+            style="height: 300px;">
             <h3 class="py-3 text-center">News and Events</h3>
-            <div class="scroll-container mb-5">
+            <div class="scroll-container mb-2" style="width: 90%;">
               <div class="scroll-viewport">
                 <div class="scroll-text text-start">
-                  Working days for all SE, TE, BE Engineering Programs (SEM III, V, VII) 13 July 2026 - 23 October 2026<br><br>
+                  Working days for all SE, TE, BE Engineering Programs (SEM III, V, VII) 13 July 2026 - 23 October
+                  2026<br><br>
                   Mid Semester Examination (MSE) SE and TE (SEM III and V) 31 August 2026 - 04 September 2026<br><br>
                   IA -1 for BE (SEM VII) 31 August 2026 - 04 September 2026<br><br>
                   Open House of Mid Semester Examination 12 September 2026<br><br>
                   Internal Assessment 2 (IA2) for BE (Sem VII) 16 October 2026 - 24 October 2026<br><br>
-                  Oral/Practical Examination for SE, TE and BE (SEM III, V and VII) 24 October 2026 - 31 October 2026<br><br>
+                  Oral/Practical Examination for SE, TE and BE (SEM III, V and VII) 24 October 2026 - 31 October
+                  2026<br><br>
                   Study Leave 03 November 2026<br><br>
                   End Semester Examination for SE, TE, BE (SEM III, V, VII) 13 November 2026 - 25 November 2026<br><br>
-                  Autonomy KT Examination for Even Semester (II, IV, VI and VIII) 30 November 2026 - 11 December 2026<br><br>
+                  Autonomy KT Examination for Even Semester (II, IV, VI and VIII) 30 November 2026 - 11 December
+                  2026<br><br>
                   Open House (ESE) for SE, TE, BE (SEM III, V, VII) 03 December 2026<br><br>
                   Result Declaration for SE, TE, BE (SEM III, V, VII) 10 December 2026<br><br>
                   Supplementary Examination for SE, TE, BE (SEM III, V, VII) 14 December 2026 - 19 December 2026<br><br>
                   Open House for Supplementary & KT Examination 28 December 2026<br><br>
-                  Results Declaration for Supplementary Examination for SE, TE, BE (SEM III, V, VII) & KT Examination 30 December 2026<br><br>
+                  Results Declaration for Supplementary Examination for SE, TE, BE (SEM III, V, VII) & KT Examination 30
+                  December 2026<br><br>
                   Commencement of New Term 04 January 2027<br>
                 </div>
               </div>
@@ -492,18 +498,18 @@
           </div>
           <div id="flagship-extra-card" class="row mx-3 justify-content-center flex-grow-1 mt-3 split-stack-card">
             <div
-              class="modern-box-green w-100 split-part d-flex flex-column justify-content-center align-items-center p-4">
-              <h4 class="text-center mb-3"><i class="bi bi-info-circle-fill"></i> About College</h4>
-              <p><strong>Don Bosco Institute of Technology (DBIT)</strong>, established in 2001, is located in Kurla
+              class="modern-box-green w-100 split-part d-flex flex-column justify-content-center align-items-center"
+              style="font-size: 0.85rem; padding: 1.25rem 1.75rem !important;">
+              <h4 class="text-center mb-2"><i class="bi bi-info-circle-fill"></i> About College</h4>
+              <p class="mb-2"><strong>Don Bosco Institute of Technology (DBIT)</strong>, established in 2001, is located in Kurla
                 (W), Mumbai. The institute is affiliated to the <strong>University of Mumbai</strong> and approved by
                 <strong>AICTE</strong>.
               </p>
-              <p>DBIT aims to provide quality technical education with a focus on values, innovation, and holistic
+              <p class="mb-2">DBIT aims to provide quality technical education with a focus on values, innovation, and holistic
                 development. The campus offers modern infrastructure, skilled faculty, active student clubs, and
                 excellent placement opportunities.</p>
-              <p>With a strong emphasis on research, entrepreneurship, and community engagement, DBIT has emerged as a
+              <p class="mb-0">With a strong emphasis on research, entrepreneurship, and community engagement, DBIT has emerged as a
                 preferred choice for engineering aspirants in Mumbai.</p>
-              <!-- <p class="text-center fw-bold"><i>DBIT – Shaping engineers, building futures.</i></p> -->
             </div>
             <div
               class="modern-box-green w-100 split-part d-flex flex-column justify-content-center align-items-center p-4">
