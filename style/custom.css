@@ -142,5 +142,176 @@
     .modern-box-green {
       padding: 1.2rem;
     }
+
+    /* ===== Main Layout Fixes ===== */
+    /* Let sidebar take full width and auto height on mobile */
+    #sidebar-events-wrapper {
+      gap: 1rem !important;
+    }
+
+    /* Cards should take full width on mobile */
+    .col-md-4,
+    .col-md-8 {
+      padding-left: 0.75rem !important;
+      padding-right: 0.75rem !important;
+    }
+
+    /* ===== Highlights Card Fix ===== */
+    .highlights-card {
+      padding: 1.5rem 1.2rem !important;
+      min-height: auto !important;
+    }
+
+    .highlights-card::after {
+      top: 6px;
+      left: 6px;
+      right: 6px;
+      bottom: 6px;
+      border-width: 4px;
+    }
+
+    .highlights-card .card-title {
+      font-size: 1.1rem;
+    }
+
+    .highlights-card p.bullet {
+      font-size: 0.95rem;
+      padding-left: 1.4em;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== HOD Card Fix ===== */
+    .hod-img {
+      width: 150px;
+    }
+
+    #hod-card {
+      height: auto !important;
+      padding: 1.5rem 1rem;
+    }
+
+    #hod-card h6 {
+      font-size: 0.95rem;
+    }
+
+    #hod-card p {
+      font-size: 0.9rem;
+      word-break: break-word;
+    }
+
+    /* ===== About IT & Why Choose Cards ===== */
+    #aboutit-card,
+    #whyit-card {
+      height: auto !important;
+    }
+
+    .card-content {
+      padding: 1.2rem 1rem;
+    }
+
+    .card-content p,
+    .card-text {
+      font-size: 0.95rem !important;
+      text-align: left;
+      word-break: break-word;
+      hyphens: auto;
+    }
+
+    /* ===== Sidebar Scroll Containers ===== */
+    .scroll-container {
+      height: calc(100% - 40px);
+    }
+
+    .scroll-text {
+      font-size: 0.8rem;
+    }
+
+    /* ===== Vision/Mission Card ===== */
+    #news-extra-card {
+      height: auto !important;
+      padding: 1.5rem 1rem;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .vision-mission-section h4 {
+      font-size: 1.05rem;
+    }
+
+    .vision-mission-section .card-text {
+      font-size: 0.92rem;
+    }
+
+    /* ===== About College Card ===== */
+    #flagship-extra-card {
+      height: auto !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+
+    .split-stack-card {
+      gap: 0.75rem;
+    }
+
+    .split-stack-card .split-part {
+      flex: none !important;
+      height: auto !important;
+    }
+
+    /* ===== Modern Box Green Border Fix ===== */
+    .modern-box-green::after {
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      border-width: 4px;
+    }
+
+    /* ===== Carousel Fix ===== */
+    .carousel {
+      margin-bottom: 1rem !important;
+    }
   }
-  
+
+  /* ===== Extra-small screens (phones in portrait) ===== */
+  @media (max-width: 480px) {
+    .modern-box-green {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+    }
+
+    .card-content {
+      padding: 1rem 0.75rem;
+    }
+
+    .highlights-card {
+      padding: 1.2rem 1rem !important;
+    }
+
+    .hod-img {
+      width: 120px;
+    }
+
+    /* Footer responsiveness */
+    footer .row > div {
+      text-align: center !important;
+      margin-bottom: 1.5rem;
+    }
+
+    footer .row > div p {
+      text-align: center !important;
+    }
+
+    footer h5 {
+      text-align: center !important;
+    }
+
+    footer iframe {
+      width: 100% !important;
+      height: 120px !important;
+    }
+  }

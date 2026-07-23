@@ -204,6 +204,7 @@
     .split-stack-card .split-part:last-child {
       flex: 0.7;
     }
+
     .highlights-card::after {
       content: '';
       position: absolute;
@@ -322,7 +323,7 @@
           <div class="col-md-4 d-flex flex-column align-items-center">
             <!-- Highlights card above HOD card in left column -->
             <div id="left-highlights-card" class="card mb-4 shadow-sm w-100 highlights-card">
-              <br><br><br><br>
+
               <!-- style="color: #1a237e" -->
               <h4 class="card-title mb-3"> Highlights</h4>
               <p class="bullet">Intake: 60</p>
@@ -415,17 +416,23 @@
         </div>
 
         <script>
-          // Ensure left cards match the height of their right-side counterparts
+          // Ensure left cards match the height of their right-side counterparts (desktop only)
           function matchCardHeights() {
             var aboutIt = document.getElementById('aboutit-card');
             var whyIt = document.getElementById('whyit-card');
             var empty = document.getElementById('empty-align-card');
             var hod = document.getElementById('hod-card');
-            if (aboutIt && empty) {
-              empty.style.height = aboutIt.offsetHeight + 'px';
-            }
-            if (whyIt && hod) {
-              hod.style.height = whyIt.offsetHeight + 'px';
+            if (window.innerWidth > 768) {
+              if (aboutIt && empty) {
+                empty.style.height = aboutIt.offsetHeight + 'px';
+              }
+              if (whyIt && hod) {
+                hod.style.height = whyIt.offsetHeight + 'px';
+              }
+            } else {
+              // Reset heights on mobile
+              if (empty) empty.style.height = 'auto';
+              if (hod) hod.style.height = 'auto';
             }
           }
           window.addEventListener('DOMContentLoaded', matchCardHeights);
@@ -435,11 +442,11 @@
       </div>
 
       <!-- Right Sidebar (30%) -->
-      <div class="col-md-4 p-3" style="height: 400px;">
-        <div id="sidebar-events-wrapper" style="gap: 1rem;">
+      <div class="col-md-4 p-3">
+        <div id="sidebar-events-wrapper" class="d-flex flex-column" style="gap: 1rem;">
           <div
             class="modern-box-green w-100 mb-4 text-center d-flex flex-column align-items-center justify-content-center"
-            style="height: 300px;">
+            style="height: 584px;">
             <h3 class="py-3 text-center">News and Events</h3>
             <div class="scroll-container mb-2" style="width: 90%;">
               <div class="scroll-viewport">
@@ -469,7 +476,7 @@
           </div>
           <div
             class="modern-box-green w-100 mb-4 text-center d-flex flex-column align-items-center justify-content-center"
-            style="height: 220px;">
+            style="min-height: 200px;">
             <h3 class="py-3 text-center">Flagship Events</h3>
             <div class="scroll-container mb-5">
               <div class="scroll-viewport">
@@ -482,7 +489,7 @@
           </div>
           <!-- Keep the two new cards below -->
           <div id="news-extra-card"
-            class="row border rounded mx-3 justify-content-center flex-grow-1 mt-3 highlights-card vision-mission-section">
+            class="border rounded mx-0 justify-content-center flex-grow-1 mt-3 highlights-card vision-mission-section">
             <h4 class="mb-2"><i class="bi bi-eye-fill"></i> Vision</h4>
             <p class="card-text">
               To become a preferred choice for the students and recruiters. To be known for contributions towards Open
@@ -496,19 +503,21 @@
               Technology.
             </p>
           </div>
-          <div id="flagship-extra-card" class="row mx-3 justify-content-center flex-grow-1 mt-3 split-stack-card">
-            <div
-              class="modern-box-green w-100 split-part d-flex flex-column justify-content-center align-items-center"
+          <div id="flagship-extra-card" class="mx-0 justify-content-center flex-grow-1 mt-3 split-stack-card">
+            <div class="modern-box-green w-100 split-part d-flex flex-column justify-content-center align-items-center"
               style="font-size: 0.85rem; padding: 1.25rem 1.75rem !important;">
               <h4 class="text-center mb-2"><i class="bi bi-info-circle-fill"></i> About College</h4>
-              <p class="mb-2"><strong>Don Bosco Institute of Technology (DBIT)</strong>, established in 2001, is located in Kurla
+              <p class="mb-2"><strong>Don Bosco Institute of Technology (DBIT)</strong>, established in 2001, is located
+                in Kurla
                 (W), Mumbai. The institute is affiliated to the <strong>University of Mumbai</strong> and approved by
                 <strong>AICTE</strong>.
               </p>
-              <p class="mb-2">DBIT aims to provide quality technical education with a focus on values, innovation, and holistic
+              <p class="mb-2">DBIT aims to provide quality technical education with a focus on values, innovation, and
+                holistic
                 development. The campus offers modern infrastructure, skilled faculty, active student clubs, and
                 excellent placement opportunities.</p>
-              <p class="mb-0">With a strong emphasis on research, entrepreneurship, and community engagement, DBIT has emerged as a
+              <p class="mb-0">With a strong emphasis on research, entrepreneurship, and community engagement, DBIT has
+                emerged as a
                 preferred choice for engineering aspirants in Mumbai.</p>
             </div>
             <div
@@ -543,7 +552,7 @@
   </script>
 
   <script>
-    // Match new extra sidebar card heights to left main cards
+    // Match new extra sidebar card heights to left main cards (desktop only)
     function matchSidebarCardHeights() {
       var aboutIt = document.getElementById('aboutit-card');
       var whyIt = document.getElementById('whyit-card');
@@ -551,18 +560,25 @@
       var flagship = document.getElementById('flagship-card');
       var newsExtra = document.getElementById('news-extra-card');
       var flagshipExtra = document.getElementById('flagship-extra-card');
-      if (aboutIt && newsExtra) {
-        newsExtra.style.height = aboutIt.offsetHeight + 'px';
-      }
-      if (whyIt && flagshipExtra) {
-        flagshipExtra.style.height = whyIt.offsetHeight + 'px';
-      }
-      // Keep original matching for top cards if needed
-      if (aboutIt && news) {
-        news.style.height = aboutIt.offsetHeight + 'px';
-      }
-      if (whyIt && flagship) {
-        flagship.style.height = whyIt.offsetHeight + 'px';
+      if (window.innerWidth > 768) {
+        if (aboutIt && newsExtra) {
+          newsExtra.style.height = aboutIt.offsetHeight + 'px';
+        }
+        if (whyIt && flagshipExtra) {
+          flagshipExtra.style.height = whyIt.offsetHeight + 'px';
+        }
+        if (aboutIt && news) {
+          news.style.height = aboutIt.offsetHeight + 'px';
+        }
+        if (whyIt && flagship) {
+          flagship.style.height = whyIt.offsetHeight + 'px';
+        }
+      } else {
+        // Reset heights on mobile
+        if (newsExtra) newsExtra.style.height = 'auto';
+        if (flagshipExtra) flagshipExtra.style.height = 'auto';
+        if (news) news.style.height = 'auto';
+        if (flagship) flagship.style.height = 'auto';
       }
     }
     window.addEventListener('DOMContentLoaded', matchSidebarCardHeights);
@@ -575,11 +591,17 @@
       var aboutIt = document.getElementById('aboutit-card');
       var left = document.getElementById('left-highlights-card');
       var right = document.getElementById('news-extra-card');
-      if (aboutIt && left) {
-        left.style.height = aboutIt.offsetHeight + 'px';
-      }
-      if (aboutIt && right) {
-        right.style.height = aboutIt.offsetHeight + 'px';
+      if (window.innerWidth > 768) {
+        if (aboutIt && left) {
+          left.style.height = aboutIt.offsetHeight + 'px';
+        }
+        if (aboutIt && right) {
+          right.style.height = aboutIt.offsetHeight + 'px';
+        }
+      } else {
+        // Reset heights on mobile
+        if (left) left.style.height = 'auto';
+        if (right) right.style.height = 'auto';
       }
     }
     window.addEventListener('DOMContentLoaded', matchHighlightsHeights);
